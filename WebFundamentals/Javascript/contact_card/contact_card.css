@@ -1,0 +1,46 @@
+#contact_form{
+	display: inline-block;
+}
+p{
+	font-size: 14pt;
+
+}
+#description{
+	width: 200px;
+	height:70px;
+	text-align: top;
+}
+#button{
+	width:230px;
+	height:150px;
+	margin-top: 40px;
+}
+#submit_btn{
+	width:80px;
+	height: 64px;
+	/*margin-top: 40px;*/
+	padding:0px;	
+}
+.info_card{
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 131px;
+}
+.card{
+	width:200px;
+	height:90px;
+	border:2px solid black;
+	display: block;
+	vertical-align: top;
+	margin-left: 131px;
+	margin-top: 40px;
+	text-align: center;
+
+}
+.card p{
+	font-size: 14px;
+}
+.desc{
+	display:none;
+}
+	

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Contact Card</title>
+		<link rel="stylesheet" type="text/css" href="contact_card.css">
+		<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#contact_form").submit(function(){
+					alert('you submitted me!');
+
+					return false;
+				});
+					
+
+				$(document).on("click","#submit_btn",function(){
+					var test1 = $("#first_name").val();
+					var test2 = $("#last_name").val();
+					var test3 = $("#description").val();
+					
+					$(".info_card").append("<div class='card' ><h3>"+test1+"  "+test2+"</h3><p>Click for description!</p><p class='desc'>"+test3+"</p></div>");
+
+				})
+
+				$(document).on("click",".card",function(){
+					$(this).children("h3,p,p.desc").toggle();
+					// $(this).children("p.desc").toggle();
+				// 	$("div#card").html("<p>"+test3+"</p>");
+
+				})
+			});
+
+
+		
+		</script>
+		
+	</head>
+	<body>
+		<form id="contact_form">
+			<p> First Name:  <input id="first_name" type="text" name="first_name"></p>
+			<p> Last Name: <input id="last_name" type="text" name="last_name"></p>
+			<p> Description:</p>
+			<input id="description" type="text" name="description_box" value="Enter_Description">
+			<div id="button"><input id="submit_btn" type="submit" value="Add_User"></div>
+
+		</form>
+		<div class="info_card"> 
+				<div>
+					
+					<!-- <p id="desc"></p> -->
+				</div>
+		</div>
+		
+
+
+	</body>
+</html>
